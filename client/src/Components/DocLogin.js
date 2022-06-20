@@ -253,18 +253,18 @@ class DocLogin extends Component {
 
     return (
 
-      <div className="dlbody" >
+      <div className="dlbody" style={{ backgroundColor: "lightgreen" }}>
 
-        <div className="alterBut">
-          <Button className="dbutton" variant="primary" value="1" onClick={(event) => this.setState({ formNum: 0 })}>Doctor</Button>
+        <div className="alterBut" style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "space-evenly", }}>
+          <div className="dbutton" style={{ padding: "60px", marginTop: "10px", color: "white", fontWeight: "bolder", fontSize: "30px", paddingTop: "10px", paddingBottom: "10px", cursor: "pointer", border: "0.5px solid white", borderRadius: "30px", marginBottom: "30px" }} variant="primary" value="1" onClick={(event) => this.setState({ formNum: 0 })}>Doctor</div>
 
-          <Button className="pbutton" variant="primary" value="0" onClick={(event) => this.setState({ formNum: 1 })}>Patient</Button>
+          <div className="pbutton" style={{ padding: "60px", marginTop: "10px", color: "white", fontWeight: "bolder", fontSize: "30px", paddingTop: "10px", paddingBottom: "10px", cursor: "pointer", border: "0.5px solid white", borderRadius: "30px", marginBottom: "30px" }} variant="primary" value="0" onClick={(event) => this.setState({ formNum: 1 })}>Patient</div>
 
-          <Button className="pbutton" variant="primary" value="2" onClick={(event) => this.setState({ formNum: 2 })}>Hospital</Button>
+          <div className="pbutton" style={{ padding: "60px", marginTop: "10px", color: "white", fontWeight: "bolder", fontSize: "30px", paddingTop: "10px", paddingBottom: "10px", cursor: "pointer", border: "0.5px solid white", borderRadius: "30px", marginBottom: "30px" }} variant="primary" value="2" onClick={(event) => this.setState({ formNum: 2 })}>Hospital</div>
 
-          <Button className="pbutton" variant="primary" value="3" onClick={(event) => this.setState({ formNum: 3 })}>Owner</Button>
+          <div className="pbutton" style={{ backgroundColor: "orange", padding: "60px", marginTop: "10px", color: "white", fontWeight: "bolder", fontSize: "30px", paddingTop: "10px", paddingBottom: "10px", cursor: "pointer", border: "0.5px solid white", borderRadius: "30px", marginBottom: "30px" }} variant="primary" value="3" onClick={(event) => this.setState({ formNum: 3 })}>Owner</div>
 
-          <Button className="pbutton" variant="primary" value="4" onClick={(event) => this.setState({ formNum: 4 })}>Insurance Comp.</Button>
+          <div className="pbutton" style={{ padding: "60px", marginTop: "10px", color: "white", fontWeight: "bolder", fontSize: "30px", paddingTop: "10px", paddingBottom: "10px", cursor: "pointer", border: "0.5px solid white", borderRadius: "30px", marginBottom: "30px" }} variant="primary" value="4" onClick={(event) => this.setState({ formNum: 4 })}>Insurance Company</div>
 
         </div>
 

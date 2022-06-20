@@ -12,8 +12,8 @@ class NavbarComp extends Component{
           
             <div bg="dark">
                 
-              <Navbar bg="dark" variant="dark">
-                <Navbar.Brand href="#home">EHR using blockchain</Navbar.Brand>
+            <Navbar bg="primary" variant="light">
+              <h3 href="#home" style={{ color: "white" }}>EHR Hospitals</h3>
                 <Nav className="mr-auto">
                   {}
                 </Nav>

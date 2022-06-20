@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Input, message, Tag, Card, Collapse } from "antd";
 import { Button } from "react-bootstrap";
+import './main.css';
 
 // import healthRecord from "../contracts/DoctorAddRecord.json"
 // import getWeb3 from '../getWeb3';
@@ -81,63 +82,63 @@ class Owner extends Component {
   render() {
     return (
       <div className="container">
-        <div className="row mt-2">
-          <div className="col mt-2" style={{ border: "2px solid black" }}>
+        <div className="row mt-2" style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
+          <div className="col mt-2" style={{ backgroundColor: "cyan" }}>
             <h4 style={{ align: "centre" }}>Create Hospital</h4>
             <div>
               <form onSubmit={this.registerHospital}>
                 <div className="label mt-2">
                   <b>Blockchain Address:</b>
                 </div>
-                <input
+                <Input
                   type="text"
                   name="name"
                   id="hosp_id"
                   placeholder="Id"
-                ></input>
+                ></Input>
 
                 <br></br>
                 <div className="label mt-2">
                   <b>Name:</b>
                 </div>
-                <input
+                <Input
                   type="text"
                   name="name"
                   id="hosp_name"
                   placeholder="Name"
-                ></input>
+                ></Input>
 
                 <br></br>
                 <div className="label mt-2">
                   <b>Location:</b>
                 </div>
-                <input
+                <Input
                   type="text"
                   name="name"
                   id="hosp_location"
                   placeholder="Location"
-                ></input>
+                ></Input>
 
                 <br></br>
-                <Button variant="dark" className="button" type="submit">
-                  Register Hospital
+                <Button variant="success" className="button" type="submit">
+                  Create Hospital
                 </Button>
               </form>
             </div>
           </div>
-
-          <div className="col mt-2" style={{ border: "2px solid black" }}>
-            <h4 style={{ alogn: "centre" }}>Add Insurance Comp.</h4>
+          <div className="m-3" />
+          <div className="col mt-2 rounded-md" style={{ backgroundColor: "yellow" }} >
+            <h4 style={{ alogn: "centre" }}>Create Insurance Comp.</h4>
             <div>
               <form onSubmit={this.addInsuranceComp}>
                 <div className="label mt-2">Name:</div>
-                <input type="text" id="company_name" placeholder="Name"></input>
+                <Input type="text" id="company_name" placeholder="Name"></Input>
                 <br></br>
                 <div className="label mt-2">Blockchain Address:</div>
-                <input type="text" id="company_id" placeholder="Id"></input>
+                <Input type="text" id="company_id" placeholder="Id"></Input>
                 <br></br>
-                <Button variant="dark" className="button" type="submit">
-                  Add
+                <Button variant="primary" className="button" type="submit">
+                  Create Company
                 </Button>
               </form>
             </div>
@@ -145,8 +146,8 @@ class Owner extends Component {
         </div>
 
         <div className="row mt-2">
-          <div className="col mt-2" style={{border:'2px solid black'}}>
-          <h4 style={{ alogn: "centre" }}>Add User by Adhaar</h4>
+          <div className="col mt-2" style={{ backgroundColor: "pink" }}>
+            <h4 style={{ align: "centre" }}>Add User by Adhaar</h4>
             <div>
               <form onSubmit={this.addUserByAdhaar}>
                 
@@ -157,27 +158,27 @@ class Owner extends Component {
                 <br></br>
 
                 <div className="label mt-2">Name:</div>
-                <input type="text" id="user_name" placeholder="Name"></input>
+                <Input type="text" id="user_name" placeholder="Name"></Input>
                 <br></br>
                 
                 <div className="label mt-2">Blockchain Address:</div>
-                <input type="text" id="adhaar_blockchain_id" placeholder="Blockchain Id"></input>
+                <Input type="text" id="adhaar_blockchain_id" placeholder="Blockchain Id"></Input>
                 <br></br>
 
                 <div className="label mt-2">Adhaar number:</div>
-                <input type="text" id="adhaar_number" placeholder="Adhaar"></input>
+                <Input type="text" id="adhaar_number" placeholder="Adhaar"></Input>
                 <br></br>
 
                 <div className="label mt-2">DOB:</div>
-                <input type="text" id="dob" placeholder="DD/MM/YYYY"></input>
+                <Input type="text" id="dob" placeholder="DD/MM/YYYY"></Input>
                 <br></br>
 
                 <div className="label mt-2">pincode:</div>
-                <input type="text" id="pincode" placeholder="pincode"></input>
+                <Input type="text" id="pincode" placeholder="pincode"></Input>
                 <br></br>
                 
                 <Button variant="dark" className="button" type="submit">
-                  Add
+                  ADD to EHR
                 </Button>
               </form>
             </div>

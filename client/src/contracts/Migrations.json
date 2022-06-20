@@ -59,7 +59,7 @@
   "sourceMap": "36:326:1:-;;;196:52;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;224:5:1;:18;;-1:-1:-1;;;;;;224:18:1;232:10;224:18;;;36:326;;;;;;",
   "deployedSourceMap": "36:326:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;36:326:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;86:36;;;:::i;:::-;;;;;;;;;;;;;;;;61:20;;;:::i;:::-;;;;;;;;;;;;;;;;;;;254:105;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;254:105:1;;:::i;:::-;;86:36;;;;:::o;61:20::-;;;;;;:::o;254:105::-;176:5;;;;162:10;:19;158:26;;;317:24;:36;;;158:26;254:105;:::o",
   "source": "pragma solidity >=0.4.21 <0.7.0;\r\n\r\ncontract Migrations {\r\n  address public owner;\r\n  uint public last_completed_migration;\r\n\r\n  modifier restricted() {\r\n    if (msg.sender == owner) _;\r\n  }\r\n\r\n  constructor() public {\r\n    owner = msg.sender;\r\n  }\r\n\r\n  function setCompleted(uint completed) public restricted {\r\n    last_completed_migration = completed;\r\n  }\r\n}\r\n",
-  "sourcePath": "C:\\Users\\URVASHI\\OneDrive\\Desktop\\Mnnit files\\THESIS WORK\\Thesis project\\My_projects\\EHR using Blockchain 1.1\\contracts\\Migrations.sol",
+  "sourcePath": "D:\\ehr\\EHR-using-Blockchain\\contracts\\Migrations.sol",
   "ast": {
     "absolutePath": "project:/contracts/Migrations.sol",
     "exportedSymbols": {
@@ -958,12 +958,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x6A8e36FbC2fB5e8532a9D8f9d5504b2D587140aF",
-      "transactionHash": "0x0c480d12491250295123d5208d7bac3d2432c79476e690c5ec2eeb64a6ae0c75"
+      "address": "0xc5EBbC1bFA8e994B02c0E8eA3A9c8B87801d7066",
+      "transactionHash": "0x431ccc77850c4378d32fa93f73fec7ebc19fb7337369a7a9abb1887683b6fa3d"
     }
   },
   "schemaVersion": "3.4.4",
-  "updatedAt": "2022-05-10T17:18:59.417Z",
+  "updatedAt": "2022-06-19T19:44:03.927Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
