@@ -1,8 +1,10 @@
+import { ExceptionMap } from "antd/lib/result";
 import React, { Component } from "react";
 import { Button } from 'react-bootstrap';
 import "./css/DocLogin.css";
 
 class DocLogin extends Component {
+
   state = { textvalue: "", formNum: false, age: 0, pat_reg_login:0 };
   cont = this.props.state.contract;
   Acc = this.props.state.accounts;
@@ -17,13 +19,16 @@ class DocLogin extends Component {
       let adhaar_number = document.getElementById('doc_adhaar_number').value;
       result = await this.cont['OPT'].methods.checkDoctorInfo(adhaar_number).call({ from: this.Acc[0] });
       console.log(result);
-      if(!result[0])
-        alert('Invalid Credentials. Contact Respective Hospital');
-      else
-        this.props.onlogin(result[1], 0);
-    }
+      if(result[1] === '0x0000000000000000000000000000000000000000'){
+        alert('Invalid Doctor Account !')
+      }
+      else{
+        this.props.onlogin(result[0], 0);
+      }
+     }
     catch (err) {
       alert('Invalid Credentials. ');
+     // console.log(result)
     }
 
   }
@@ -41,7 +46,7 @@ class DocLogin extends Component {
   }
 
 
-  async checkPat(event) {
+  async checkPat(event) { 
     event.preventDefault(true);
 
     var result = null;
@@ -49,11 +54,13 @@ class DocLogin extends Component {
       let adhaar_number = document.getElementById('pat_adhaar_number').value;
       result = await this.cont['OPT'].methods.checkPatientInfo(adhaar_number).call({ from: this.Acc[0] });
       console.log(result);
-      if(!result[0])
-        alert('Invalid Credentials. Make sure Account Address and Adhaar Number is entered correctly');
-      else
-        this.props.onlogin(result[1], 1);
-
+      if(result[1] === '0x0000000000000000000000000000000000000000'){
+        alert('Invalid Patient Account !');
+      }
+      else{
+        this.props.onlogin(result[0], 1);
+       
+      }
     }
     catch (err) {
       alert('Invalid Credentials. Make sure Account Address and Adhaar Number is entered correctly');
@@ -67,9 +74,8 @@ class DocLogin extends Component {
 
     try {
       result = await this.cont['OPT'].methods.getHospitalInfo().call({ from: this.Acc[0] });
-      console.log(result);
+      console.log(result[0]);
       this.props.onlogin(result[0], 2);
-
     }
     catch (err) {
       alert('Owner has not created your hospital account');
@@ -99,8 +105,12 @@ class DocLogin extends Component {
     var result = null;
     try {
       result = await this.cont['OPT'].methods.getInsuranceCompInfo().call({ from: this.Acc[0] });
-      console.log(result);
-      this.props.onlogin(result[0], 4);
+      if(result[1] === '0x0000000000000000000000000000000000000000'){
+        alert('Invalid Insurance Account !')
+      }
+      else{
+        this.props.onlogin(result[0], 4);
+      }
     }
     catch (e) {
       alert('You are not registered by the owner')

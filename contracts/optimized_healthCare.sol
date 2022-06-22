@@ -76,7 +76,7 @@ contract optimized_healthCare {
 
   //setting the owner
   constructor() public {
-    owner = 0x460e1B1E279b27677Cfa4e71214715Ea77EbCF01;
+    owner = 0x37e9fFC8CBA8B57fe0aCf3E13Ae0B1837Bb7fC15;
   }
   
   //verify doctor 
@@ -253,7 +253,8 @@ contract optimized_healthCare {
     
     doctor memory d = doctors[msg.sender];
     adhaar memory a = doctor_adhaar_info[msg.sender];
-    if (a.adhaar_number == _adhaar_number){
+   
+   if (a.adhaar_number == _adhaar_number){
       return (true, d.id);
     }
 
@@ -283,6 +284,10 @@ contract optimized_healthCare {
   function getHospitalInfo() public view returns(address, string memory, string memory)
   {
     hospital memory h = hospitals[msg.sender];
+    if(h.id == 0x0000000000000000000000000000000000000000)
+    {
+      return (h.id,"false","error");
+    }
     return (h.id, h.name, h.location);
   }
 
