@@ -128,7 +128,7 @@ class Owner extends Component {
           </div>
           <div className="m-3" />
           <div className="col mt-2 rounded-md" style={{ backgroundColor: "yellow" }} >
-            <h4 style={{ alogn: "centre" }}>Create Insurance Comp.</h4>
+            <h4 style={{ align: "centre" }}>Create Insurance Comp.</h4>
             <div>
               <form onSubmit={this.addInsuranceComp}>
                 <div className="label mt-2">Name:</div>
