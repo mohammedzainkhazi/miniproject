@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Input} from "antd";
 import './main.css';
 
 // import healthRecord from "../contracts/DoctorAddRecord.json"
@@ -79,63 +78,66 @@ class Owner extends Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="row mt-2" style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
-          <div className="col mt-2" style={{ backgroundColor: "cyan" }}>
+      <div className="container ">
+        <div className="mb-5 row mt-2" style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
+          <div className="col mt-2 bg-yellow-400 rounded-md">
             <h4 style={{ align: "centre" }}>Create Hospital</h4>
             <div>
               <form onSubmit={this.registerHospital}>
-                <div className="label mt-2">
+                <div className="label mt-2  ">
                   <b>Blockchain Address:</b>
                 </div>
-                <Input
+                <input 
+                 className="py-1 px-1 rounded-full w-full"
                   type="text"
                   name="name"
                   id="hosp_id"
                   placeholder="Id"
-                ></Input>
+                ></input>
 
                 <br></br>
                 <div className="label mt-2">
                   <b>Name:</b>
                 </div>
-                <Input
+                <input
+                className="py-1 px-1 rounded-full w-full"
                   type="text"
                   name="name"
                   id="hosp_name"
                   placeholder="Name"
-                ></Input>
+                ></input>
 
                 <br></br>
                 <div className="label mt-2">
                   <b>Location:</b>
                 </div>
-                <Input
+                <input
+                className="py-1 px-1 rounded-full w-full"
                   type="text"
                   name="name"
                   id="hosp_location"
                   placeholder="Location"
-                ></Input>
+                ></input>
 
-                <br></br>
-                <button variant="success" className="button" type="submit">
+                <br></br><br/>
+                <button class="py-2 px-4  text-pink-100 transition-colors duration-150 bg-pink-600 rounded-full hover:bg-blue-700"  type="submit">
                   Create Hospital
-                </button>
-              </form>
+                </button><br/>
+              </form><br/>
             </div>
           </div>
           <div className="m-3" />
-          <div className="col mt-2 rounded-md" style={{ backgroundColor: "yellow" }} >
+          <div className="col mt-2 rounded-md bg-green-400"  >
             <h4 style={{ align: "centre" }}>Create Insurance Comp.</h4>
             <div>
-              <form onSubmit={this.addInsuranceComp}>
+              <form className="font-bold" onSubmit={this.addInsuranceComp}>
                 <div className="label mt-2">Name:</div>
-                <Input type="text" id="company_name" placeholder="Name"></Input>
+                <input type="text" className="py-1 px-1 rounded-full w-full" id="company_name" placeholder="Name"></input>
                 <br></br>
                 <div className="label mt-2">Blockchain Address:</div>
-                <Input type="text" id="company_id" placeholder="Id"></Input>
-                <br></br>
-                <button variant="primary" className="button" type="submit">
+                <input type="text" className="py-1 px-1 rounded-full w-full" id="company_id" placeholder="Id"></input>
+                <br></br><br/>
+                <button class="py-2 px-4  text-pink-100 transition-colors duration-150 bg-pink-600 rounded-full hover:bg-blue-700" type="submit">
                   Create Company
                 </button>
               </form>
@@ -143,39 +145,40 @@ class Owner extends Component {
           </div>
         </div>
 
-        <div className="row mt-2">
-          <div className="col mt-2" style={{ backgroundColor: "pink" }}>
-            <h4 style={{ align: "centre" }}>Add User by Adhaar</h4>
+        <div className="mt-5 text-bold ">
+          <div className="col pt-4 w-full rounded-md bg-violet-300" >
+            <h4>Add User by Adhaar</h4>
             <div>
-              <form onSubmit={this.addUserByAdhaar}>
+              <form className="font-bold" onSubmit={this.addUserByAdhaar}>
                 
-                <select id="adhaar_user_type" name="adhaar_user_type">
-                  <option value="patient">Patient</option>
-                  <option value="doctor">Doctor</option>
+                <select className="bg-pink-400 p-2 text-white rounded-md" id="adhaar_user_type" name="adhaar_user_type">
+                  <option className="p-2 text-white rounded-md" value="patient">Patient</option>
+                  <option className="p-2 text-white rounded-md" value="doctor">Doctor</option>
                 </select>
                 <br></br>
 
                 <div className="label mt-2">Name:</div>
-                <Input type="text" id="user_name" placeholder="Name"></Input>
+                <input type="text" className="py-1 px-1 rounded-full w-full" id="user_name" placeholder="Name"></input>
                 <br></br>
                 
                 <div className="label mt-2">Blockchain Address:</div>
-                <Input type="text" id="adhaar_blockchain_id" placeholder="Blockchain Id"></Input>
+                <input type="text" className="py-1 px-1 rounded-full w-full" id="adhaar_blockchain_id" placeholder="Blockchain Id"></input>
                 <br></br>
 
                 <div className="label mt-2">Adhaar number:</div>
-                <Input type="text" id="adhaar_number" placeholder="Adhaar"></Input>
+                <input type="text" className="py-1 px-1 rounded-full w-full" id="adhaar_number" placeholder="Adhaar"></input>
                 <br></br>
 
                 <div className="label mt-2">DOB:</div>
-                <Input type="text" id="dob" placeholder="DD/MM/YYYY"></Input>
+                <input type="text" className="py-1 px-1 rounded-full w-full" id="dob" placeholder="DD/MM/YYYY"></input>
                 <br></br>
 
                 <div className="label mt-2">pincode:</div>
-                <Input type="text" id="pincode" placeholder="pincode"></Input>
+                <input type="text" className="py-1 px-1 rounded-full w-full" id="pincode" placeholder="pincode"></input>
                 <br></br>
+                <br/>
                 
-                <button variant="dark" className="button" type="submit">
+                <button class="py-2 px-4  text-pink-100 transition-colors duration-150 bg-pink-600 rounded-full hover:bg-blue-700" type="submit">
                   ADD to EHR
                 </button>
               </form>

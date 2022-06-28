@@ -7,35 +7,31 @@ class NavbarComp extends Component {
     let isLogged = this.props.isLogged ? true : false;
 
     return (
+      <>
+        <nav class="bg-gray-800">
+          <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between h-16">
+              <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+                <div class="flex-shrink-0 flex items-center">
+                  <span class="bg-white text-black px-3 py-2 rounded-md text-sm font-medium">E H R</span>
+                </div>
+              </div>
+              <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
 
-      // <div bg="dark">
-
-      // <div bg="primary" variant="light">
-      //   <h3 href="#home" style={{ color: "black" }}>EHR Hospitals</h3>
-      //     <div className="mr-auto">
-      //       {}
-      //     </div>
-      //     <div inline>
-      //       {}
-      //       {isLogged?
-      //       <button variant="outline-light" onClick={()=>this.props.onlogout()}>Logout</button>:<div></div>}
-      //     </div>
-      //   </div>
-      // </div>
-
-      <div bg="dark">
-
-        <div bg="primary" variant="light" className="pt-3 pb-2 bg-indigo-600 flex justify-around items-center">
-          <h4 href="#home" className="text-white">EHR Hospitals</h4><br />
-          <div>
-            {isLogged ?
-              <button class="py-2 px-4  text-pink-100 transition-colors duration-150 bg-pink-600 rounded-full hover:bg-blue-700" variant="outline-light" onClick={() => this.props.onlogout()}>Logout</button> : <div></div>
-            }
+                <div class="ml-3 relative">
+                  <div>
+                    {isLogged && <button type="button" onClick={() => this.props.onlogout()} class="text-white bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                      LOGOUT
+                    </button>}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </nav>
 
 
+      </>
     );
   }
 }
