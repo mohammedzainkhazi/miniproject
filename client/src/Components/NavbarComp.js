@@ -25,7 +25,7 @@ class NavbarComp extends Component {
 
       <div bg="dark">
 
-        <div bg="primary" variant="light" className="pt-2 pb-2 bg-indigo-700 flex justify-around items-center">
+        <div bg="primary" variant="light" className="pt-3 pb-2 bg-indigo-600 flex justify-around items-center">
           <h4 href="#home" className="text-white">EHR Hospitals</h4><br />
           <div>
             {isLogged ?

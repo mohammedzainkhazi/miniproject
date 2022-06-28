@@ -161,16 +161,16 @@ class DocLogin extends Component {
 
     const insuranceCompForm =
       <div className="container">
-        <h5 style={{ align: 'centre' }}>Insurance Comp.</h5>
+        <h3 style={{ align: 'centre' }}>Insurance Company</h3>
 
         <div style={{ marginLeft: '20px' }}>
           <form>
 
             <br></br>
-            <button variant="dark" className="button" onClick={this.checkInsuranceComp}>Connect to Wallet</button>
+            <button class="py-2 px-4  text-pink-100 transition-colors duration-150 bg-pink-600 rounded-full hover:bg-blue-700" onClick={this.checkInsuranceComp}>Connect to Wallet</button>
           </form>
         </div>
-      </div>;
+      </div>
 
     const docForm =
       <div className="container">
@@ -261,7 +261,7 @@ class DocLogin extends Component {
 
     return (
 
-      <div className="dlbody" style={{ backgroundColor: "lightgreen" }}>
+      <div className="App h-full w-full bg-cyan-100" >
 
         <div className="alterBut" style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "space-evenly", }}>
           <div className="dbutton" style={{ padding: "60px", marginTop: "10px", color: "white", fontWeight: "bolder", fontSize: "30px", paddingTop: "10px", paddingBottom: "10px", cursor: "pointer", border: "0.5px solid white", borderRadius: "30px", marginBottom: "30px" }} variant="primary" value="1" onClick={(event) => this.setState({ formNum: 0 })}>Doctor</div>

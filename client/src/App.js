@@ -69,7 +69,7 @@ class App extends Component {
     //Html template will call register page or if already regestered login page will be open
     //DocLogin file will be intiated
     return (
-      <div className="App">
+      <div className="h-full">
       
         <NavbarComp isLogged={this.state.loggedAcc} onlogout={()=>this.setState({loggedAcc:null,loggedas:null})}/>
         {
