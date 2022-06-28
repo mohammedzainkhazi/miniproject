@@ -42,9 +42,9 @@ class InsuranceComp extends Component{
     render(){
         let {name, patient_list, id} = this.state;
         return(
-            <div className='container'>
+            <div className='containerInurance'>
                 <Card bordered={true}>
-                    <div >
+                    <div class="name-id-card">
                         <b>Name:</b> {name} <br></br>
                         <b>Address:</b> {id}
                     </div>
