@@ -1,6 +1,4 @@
-import { ExceptionMap } from "antd/lib/result";
 import React, { Component } from "react";
-import { Button } from 'react-bootstrap';
 import "./css/DocLogin.css";
 
 class DocLogin extends Component {
@@ -143,7 +141,7 @@ class DocLogin extends Component {
           <form>
 
             <br></br>
-            <Button variant="dark" className="button" onClick={this.checkOwner}>Login By Address</Button>
+            <button variant="dark" className="button" onClick={this.checkOwner}>Connect Wallet</button>
           </form>
         </div>
       </div>;
@@ -156,7 +154,7 @@ class DocLogin extends Component {
           <form>
 
             <br></br>
-            <Button variant="dark" className="button" onClick={this.checkHospital}>Login By Address</Button>
+            <button variant="dark" className="button" onClick={this.checkHospital}>Login By Address</button>
           </form>
         </div>
       </div>;
@@ -169,7 +167,7 @@ class DocLogin extends Component {
           <form>
 
             <br></br>
-            <Button variant="dark" className="button" onClick={this.checkInsuranceComp}>Login By Address</Button>
+            <button variant="dark" className="button" onClick={this.checkInsuranceComp}>Connect to Wallet</button>
           </form>
         </div>
       </div>;
@@ -185,16 +183,16 @@ class DocLogin extends Component {
             <input type="text" name="adhaar_number" id="doc_adhaar_number" placeholder="Adhaar Number"></input>
             <br></br>
             
-            <Button variant="dark" className="button" onClick={this.checkDoc}>Login As Doctor</Button>
+            <button variant="dark" className="button" onClick={this.checkDoc}>Login As Doctor</button>
           </form>
         </div>
       </div>;
 
     const patForm =
       <div>
-        <div><h5 style={{ align: 'centre' }}>Patient</h5></div>
-        <Button className="button" variant="dark" onClick={this.patientRegisterForm}>Register Patient</Button>
-        <Button className="button" variant="dark" onClick={this.patientLoginForm}>Login</Button>
+        <div><h3 style={{ align: 'centre' }}>Patient</h3></div>
+        <button class="h-10 px-5 m-2 text-pink-100 transition-colors duration-150 bg-pink-600 rounded-full focus:shadow-outline hover:bg-pink-700" variant="dark" onClick={this.patientRegisterForm}>Register Patient</button>
+        <button class="h-10 px-5 m-2 text-blue-300 transition-colors duration-150 bg-blue-600 rounded-full focus:shadow-outline hover:bg-blue-700" variant="dark" onClick={this.patientLoginForm}>Login</button>
 
         { this.state.pat_reg_login === 0?
         <div>
@@ -226,7 +224,7 @@ class DocLogin extends Component {
             <br></br>
 
 
-            <Button className="button" variant="dark" type="submit">Register Patient</Button>
+            <button class="h-10 px-5 m-2 text-indigo-300 transition-colors duration-150 bg-indigo-600 rounded-full focus:shadow-outline hover:bg-indigo-700" variant="dark" type="submit">Register Patient</button>
           </form>
         </div>
         : 
@@ -237,7 +235,7 @@ class DocLogin extends Component {
           <input type="text" name="adhaar_number" id="pat_adhaar_number" placeholder="Adhaar Number"></input>
           <br></br>
 
-          <Button className="button" variant="dark" onClick={this.checkPat.bind(this)}>Login As Patient</Button>
+          <button class="h-10 px-5 m-2 text-blue-300 transition-colors duration-150 bg-blue-600 rounded-full focus:shadow-outline hover:bg-blue-700" variant="dark" onClick={this.checkPat.bind(this)}>Login As Patient</button>
 
         </div>
       }
@@ -248,15 +246,15 @@ class DocLogin extends Component {
     const fNum = this.state.formNum;
 
     let loadForm;
-    if (fNum == 0)
+    if (fNum === 0)
       loadForm = docForm;
-    else if (fNum == 1)
+    else if (fNum === 1)
       loadForm = patForm;
-    else if (fNum == 2)
+    else if (fNum === 2)
       loadForm = hospitalForm;
-    else if (fNum == 3)
+    else if (fNum === 3)
       loadForm = ownerForm;
-    else if (fNum == 4)
+    else if (fNum === 4)
       loadForm = insuranceCompForm;
 
 

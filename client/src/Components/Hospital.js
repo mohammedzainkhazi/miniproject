@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Card } from 'antd';
-import {Button} from 'react-bootstrap';
 
 // import healthRecord from "../contracts/DoctorAddRecord.json"
 // import getWeb3 from '../getWeb3';
@@ -108,7 +107,7 @@ class Hospital extends Component{
                             <input type="text" name="Access of" id="access_of" ></input>
                             
                             <br></br>
-                            <Button variant="dark" className="button" type="submit">Grant Access</Button>
+                            <button variant="dark" className="button" type="submit">Grant Access</button>
 
                             </form>
                         </div>
@@ -126,7 +125,7 @@ class Hospital extends Component{
                                 <div className='label mt-2'>Company Address:</div>
                                 <input type="text" id="added_to_company" placeholder='Company Address'></input>
                                 <br></br>
-                                <Button variant="dark" className="button" type="submit">Add</Button>
+                                <button variant="dark" className="button" type="submit">Add</button>
                             </form>
                         </div>
                     </div>
@@ -158,7 +157,7 @@ class Hospital extends Component{
                             <input type="text" name="name" id="doc_specs" placeholder="Specialization"></input>
 
                             <br></br>
-                            <Button variant="dark" className="button" type="submit">Register Doctor</Button>
+                            <button variant="dark" className="button" type="submit">Register Doctor</button>
                         </form>
                         </div>
                     </div>

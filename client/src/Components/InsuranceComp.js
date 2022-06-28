@@ -26,7 +26,7 @@ class InsuranceComp extends Component{
 
     componentDidUpdate(prevProps,prevState){
         console.warn("Updated")
-        if(this.state.load_patient != null && this.state.count==0)
+        if(this.state.load_patient != null && this.state.count=== 0)
         {
             this.setState({load_patient :null})
         }

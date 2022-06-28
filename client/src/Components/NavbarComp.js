@@ -1,31 +1,43 @@
 import React, { Component } from "react";
-import { Form,Button,Navbar, Nav} from 'react-bootstrap';
 
 
-class NavbarComp extends Component{
-    
-    render()
-    {
-      let isLogged = this.props.isLogged?true:false;
-    
-        return(
-          
-            <div bg="dark">
-                
-            <Navbar bg="primary" variant="light">
-              <h3 href="#home" style={{ color: "white" }}>EHR Hospitals</h3>
-                <Nav className="mr-auto">
-                  {}
-                </Nav>
-                <Form inline>
-                  {}
-                  {isLogged?
-                  <Button variant="outline-light" onClick={()=>this.props.onlogout()}>Logout</Button>:<div></div>}
-                </Form>
-              </Navbar>
-            </div>
-            );
-    }
+class NavbarComp extends Component {
+
+  render() {
+    let isLogged = this.props.isLogged ? true : false;
+
+    return (
+
+      // <div bg="dark">
+
+      // <div bg="primary" variant="light">
+      //   <h3 href="#home" style={{ color: "black" }}>EHR Hospitals</h3>
+      //     <div className="mr-auto">
+      //       {}
+      //     </div>
+      //     <div inline>
+      //       {}
+      //       {isLogged?
+      //       <button variant="outline-light" onClick={()=>this.props.onlogout()}>Logout</button>:<div></div>}
+      //     </div>
+      //   </div>
+      // </div>
+
+      <div bg="dark">
+
+        <div bg="primary" variant="light" className="pt-2 pb-2 bg-indigo-700 flex justify-around items-center">
+          <h4 href="#home" className="text-white">EHR Hospitals</h4><br />
+          <div>
+            {isLogged ?
+              <button class="py-2 px-4  text-pink-100 transition-colors duration-150 bg-pink-600 rounded-full hover:bg-blue-700" variant="outline-light" onClick={() => this.props.onlogout()}>Logout</button> : <div></div>
+            }
+          </div>
+        </div>
+      </div>
+
+
+    );
+  }
 }
 
 

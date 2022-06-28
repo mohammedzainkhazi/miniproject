@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Input} from "antd";
-import { Button } from "react-bootstrap";
 import './main.css';
 
 // import healthRecord from "../contracts/DoctorAddRecord.json"
@@ -55,7 +54,6 @@ class Owner extends Component {
 
   async addUserByAdhaar(event){
     event.preventDefault();
-    var result = null;
     try{
       let user_type = document.getElementById('adhaar_user_type').value;
       let user_name = document.getElementById('user_name').value;
@@ -66,11 +64,11 @@ class Owner extends Component {
 
       console.log(pincode);
 
-      if(user_type == 'patient'){
-        result = await this.contract.methods.addPatientAdhaarInfo(adhaar_blockchain_id, user_name, dob, pincode, adhaar_number).send({ from: this.accounts[0] });
+      if(user_type === 'patient'){
+        await this.contract.methods.addPatientAdhaarInfo(adhaar_blockchain_id, user_name, dob, pincode, adhaar_number).send({ from: this.accounts[0] });
       }
       else{
-        result = await this.contract.methods.addDoctorAdhaarInfo(adhaar_blockchain_id, user_name, dob, pincode, adhaar_number).send({ from: this.accounts[0] });
+        await this.contract.methods.addDoctorAdhaarInfo(adhaar_blockchain_id, user_name, dob, pincode, adhaar_number).send({ from: this.accounts[0] });
       }
     }
     catch(e){
@@ -120,9 +118,9 @@ class Owner extends Component {
                 ></Input>
 
                 <br></br>
-                <Button variant="success" className="button" type="submit">
+                <button variant="success" className="button" type="submit">
                   Create Hospital
-                </Button>
+                </button>
               </form>
             </div>
           </div>
@@ -137,9 +135,9 @@ class Owner extends Component {
                 <div className="label mt-2">Blockchain Address:</div>
                 <Input type="text" id="company_id" placeholder="Id"></Input>
                 <br></br>
-                <Button variant="primary" className="button" type="submit">
+                <button variant="primary" className="button" type="submit">
                   Create Company
-                </Button>
+                </button>
               </form>
             </div>
           </div>
@@ -177,9 +175,9 @@ class Owner extends Component {
                 <Input type="text" id="pincode" placeholder="pincode"></Input>
                 <br></br>
                 
-                <Button variant="dark" className="button" type="submit">
+                <button variant="dark" className="button" type="submit">
                   ADD to EHR
-                </Button>
+                </button>
               </form>
             </div>
           </div>
